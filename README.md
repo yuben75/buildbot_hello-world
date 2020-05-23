@@ -12,7 +12,9 @@ buildbot start master
 #buildbot-worker create-worker worker 192.168.1.111:9989 example-worker pass  
 buildbot-worker create-worker worker localhost example-worker pass  
 buildbot-worker start worker  
-
+########
+buildbot-worker create-worker worker2 192.168.1.111:9989 buildbot-worker buildbot-pass
+buildbot-worker start worker2  
 ########
 docker cp ./master.cfg id:/var/lib/buildbot  
 ###############################################  
