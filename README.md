@@ -13,11 +13,13 @@ buildbot start master
 buildbot-worker create-worker worker localhost example-worker pass  
 buildbot-worker start worker  
 
-
+########
+docker cp ./master.cfg id:/var/lib/buildbot  
 ###############################################  
 buildbot reconfig master  
+apt-get install python-pip  
+pip install buildbot-worker  
 
-
-#docker cp ./master.cfg id:/var/lib/buildbot  
+docker cp ./master.cfg id:/var/lib/buildbot  
 #  
 #  
